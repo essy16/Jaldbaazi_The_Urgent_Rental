@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "272159282829",
+    "project_id": "jaldbaazi-the-urgent-rental",
+    "storage_bucket": "jaldbaazi-the-urgent-rental.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272159282829:android:e93620dbf26bd2635eb4c4",
+        "android_client_info": {
+          "package_name": "com.example.jaldbaazi_theurgentrental"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqEgRiCDGo13QomDALMd9ZyBFPMkYVN9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

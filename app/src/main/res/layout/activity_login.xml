@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/white"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:id="@+id/log_in_banner"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            android:src="@drawable/log_in"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/log_in_banner"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_input_layout"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_corner">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:padding="16dp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_input_layout"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_corner">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="16dp"
+                android:textStyle="bold"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/forgot_password_textview"
+            android:text="Forgot Your Password?"
+            android:textColor="#808080"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
+            />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_account_button"
+            android:layout_width="350dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:paddingVertical="12dp"
+            android:text="Log in"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:background="@drawable/rounded_corner"/>
+
+        <ProgressBar
+            android:id="@+id/ProgressBar"
+            android:layout_width="24dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/login_form"
+        android:id="@+id/log_in_google"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="350dp"
+            android:id="@+id/continue_with_google__button"
+            android:layout_height="55dp"
+            android:text="Continue With Google"
+            android:backgroundTint="@color/my_color"
+            android:paddingVertical="12dp"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            app:icon="@drawable/google_symbol"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corner"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/log_in_google"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif"
+            android:text="Don't have an account? "
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/sign_up_Text"
+            android:text="Sign up"
+            android:textColor="@color/my_color"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp"
+            android:fontFamily="sans-serif"
+
+            />
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

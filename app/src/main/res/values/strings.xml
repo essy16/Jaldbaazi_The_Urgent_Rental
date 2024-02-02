@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Jaldbaazi</string>
+    <string name="app_slogan">Jaldi Me Ho Jaldbaazi Karo</string>
+
+
+    <!-- Screen 1: Welcome -->
+    <string name="onboarding_screen1_title">Welcome to Jaldbaazi</string>
+    <string name="onboarding_screen1_description">Jaldi Me Ho Jaldbaazi Karo!</string>
+
+    <!-- Screen 2: How it Works -->
+    <string name="onboarding_screen2_title">How it Works</string>
+    <string name="onboarding_screen2_description">Discover items and services within\n A 1-kilometer radius for swift access.</string>
+
+    <!-- Screen 3: Create an Urgent Request -->
+    <string name="onboarding_screen3_title">Create an Urgent Request</string>
+    <string name="onboarding_screen3_description">Need something urgently?\n Create a request in seconds!</string>
+
+    <!-- Screen 4: Explore & Connect -->
+    <string name="onboarding_screen4_title">Explore And Connect</string>
+    <string name="onboarding_screen4_description">Explore what is available nearby\n Connect instantly!</string>
+
+
+    <!-- Screen 5: Start Your Jaldbaazi Journey -->
+    <string name="onboarding_screen5_title">Start Your Jaldbaazi Journey</string>
+    <string name="onboarding_screen5_description">Start your Jaldbaazi journey now \n experience the power of instant connections!</string>
+
+    <string name="onboarding_button_skip">Skip</string>
+    <string name="onboarding_button_next">Next</string>
+    <string name="onboarding_button_get_started">Let\'s Get Started</string>
+
+
+    <string name="my_email"><u>Login With Email </u></string>
+    <string name="my_terms">if you want to continue, you are accepting\n
+        <u>
+Jaldbaazi Terms and Conditions and Privacy Policy </u></string>
+
+
+</resources>
