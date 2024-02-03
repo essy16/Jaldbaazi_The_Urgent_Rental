@@ -55,9 +55,10 @@ public class SignUpActivity extends AppCompatActivity {
                 // Redirect to LoginActivity
                 Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                 startActivity(intent);
-                finish(); // Optional: finish SignUpActivity so user cannot navigate back
+//                finish(); // Optional: finish SignUpActivity so user cannot navigate back
             }
         });
+
 
     }
 
@@ -151,12 +152,17 @@ public class SignUpActivity extends AppCompatActivity {
     private void showProgress(boolean show) {
         if (show) {
             progressBar.setVisibility(View.VISIBLE);
+            progressBar.animate().alpha(1.0f); // Fade in the progress bar
             createAccountButton.setText(""); // or set to a loading message
+            createAccountButton.setEnabled(false); // Disable the button while showing progress
         } else {
+            progressBar.animate().alpha(0.0f); // Fade out the progress bar
             progressBar.setVisibility(View.GONE);
-            createAccountButton.setText("Create Account");
+            createAccountButton.setText("Login");
+            createAccountButton.setEnabled(true); // Enable the button after progress is hidden
         }
     }
+
 
     private boolean containsUppercase(String str) {
         for (char c : str.toCharArray()) {
@@ -171,3 +177,4 @@ public class SignUpActivity extends AppCompatActivity {
         return !str.matches("[A-Za-z0-9 ]*");
     }
 }
+

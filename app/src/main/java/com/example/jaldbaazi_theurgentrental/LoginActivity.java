@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.progressindicator.IndeterminateDrawable;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         loginMaterialButton = findViewById(R.id.login_account_button);
-        progressBar = findViewById(R.id.ProgressBar);
+        progressBar = findViewById(R.id.loginProgressBar);
         signup = findViewById(R.id.sign_up_Text);
 
         loginMaterialButton.setOnClickListener(new View.OnClickListener() {
@@ -117,12 +118,18 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void showProgress(boolean show) {
+
         if (show) {
             progressBar.setVisibility(View.VISIBLE);
-            loginMaterialButton.setText(""); // or set to a loading message
+            progressBar.animate().alpha(1.0f); // Fade in the progress bar
+            loginMaterialButton.setText("");// or set to a loading message
+            loginMaterialButton.setEnabled(false); // Disable the button while showing progress
         } else {
+            progressBar.animate().alpha(0.0f); // Fade out the progress bar
             progressBar.setVisibility(View.GONE);
             loginMaterialButton.setText("Login");
+            loginMaterialButton.setEnabled(true); // Enable the button after progress is hidden
         }
     }
 }
+
